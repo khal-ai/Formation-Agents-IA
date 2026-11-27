@@ -223,7 +223,7 @@ Récupère les articles publiés dans les flux RSS : titre, lien, date, extrait 
 4. Copiez-collez cette expression :
 
 ```javascript
-={{ $('Lire sources').item.json.rss }}
+{{ $('Lire sources').item.json.rss }}
 ```
 
 Cette expression signifie :
@@ -460,7 +460,7 @@ Vérifie si le nœud `Filtrer` a retenu au moins un article.
 Dans Value 1, activez le mode Expression et copiez-collez :
 
 ```javascript
-={{ $json.total }}
+{{ $json.total }}
 ```
 
 Dans Value 2, saisissez le nombre `0`.
@@ -490,7 +490,7 @@ Ce nœud utilise un modèle d'IA pour sélectionner les articles pertinents et r
 5. Copiez-collez le prompt suivant, en entier :
 
 ```text
-=Tu es rédacteur en chef d'une newsletter francophone.
+Tu es rédacteur en chef d'une newsletter francophone.
 
 Règles :
 - Utilise UNIQUEMENT les articles fournis, référencés par leur id. N'écris jamais d'URL.
@@ -773,7 +773,7 @@ Envoie la newsletter par Gmail à chaque abonné actif, en utilisant son adresse
 Passez le champ en mode **Expression** et copiez-collez :
 
 ```javascript
-={{ $json.email }}
+{{ $json.email }}
 ```
 
 Cette expression récupère l'adresse email de l'abonné courant. Le champ de la feuille doit être nommé exactement `email`.
@@ -783,7 +783,7 @@ Cette expression récupère l'adresse email de l'abonné courant. Le champ de la
 Passez le champ en mode **Expression** et copiez-collez :
 
 ```javascript
-={{ $('Générer HTML').first().json.objet }}
+{{ $('Générer HTML').first().json.objet }}
 ```
 
 Cette expression récupère l'objet de la newsletter générée.
@@ -793,7 +793,7 @@ Cette expression récupère l'objet de la newsletter générée.
 Passez le champ en mode **Expression** et copiez-collez :
 
 ```javascript
-={{ $('Générer HTML').first().json.html }}
+{{ $('Générer HTML').first().json.html }}
 ```
 
 Cette expression récupère le HTML de la newsletter. Ne collez pas le code HTML lui-même dans le champ Message.
